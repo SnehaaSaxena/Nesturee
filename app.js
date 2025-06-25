@@ -102,6 +102,10 @@ app.use((req,res,next)=>{
 //     res.send(registeredUser);
 // });
 
+app.get("/", (req, res) => {
+    res.send("Welcome to Wanderlust!");
+});
+
 app.use("/listings",listingRouter);// means /listing jaha bhi aaeyga we will use our listings
 app.use("/listings/:id/reviews", reviewRouter);//these 2 routes should be after flash
 app.use("/",userRouter);
