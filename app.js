@@ -103,7 +103,7 @@ app.use((req,res,next)=>{
 // });
 
 app.get("/", (req, res) => {
-    res.send("Welcome to Wanderlust!");
+    res.redirect("/listings");
 });
 
 app.use("/listings",listingRouter);// means /listing jaha bhi aaeyga we will use our listings
